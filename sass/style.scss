@@ -4,6 +4,7 @@ $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::after,
@@ -36,22 +37,22 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.logo:hover {
+.header__logo:hover {
   filter: invert(62%) sepia(25%) saturate(1005%) hue-rotate(109deg) brightness(88%) contrast(100%);
   cursor: pointer;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,14 +67,14 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.7rem;
@@ -96,15 +97,15 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
   
 }
 .btn:active {
   transform: translateY(0);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
 }
 
-.btn-white {
+.btn--white {
   color: $color-grey-dark;
   background-color: $color-white;
 }
@@ -122,7 +123,7 @@ body {
   transition: transform 0.2s, opacity 0.2s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: $color-white;
 }
 
@@ -131,7 +132,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
