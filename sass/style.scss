@@ -28,36 +28,37 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: 
-    linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), 
+  background-image:
+    linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
     url('../img/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
 
-.header__logo {
-  height: 3.5rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo:hover {
-  filter: invert(62%) sepia(25%) saturate(1005%) hue-rotate(109deg) brightness(88%) contrast(100%);
-  cursor: pointer;
-}
+  &__logo {
+    height: 3.5rem;
+  }
 
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  &__logo:hover {
+    filter: invert(62%) sepia(25%) saturate(1005%) hue-rotate(109deg) brightness(88%) contrast(100%);
+    cursor: pointer;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -65,84 +66,76 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    animation: moveInRight 1s ease-out;
+  }
 }
 
-.heading-primary--main {
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation: moveInLeft 1s ease-out;
-}
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .15s;
+    font-size: 1.6rem;
+  }
 
-.heading-primary--sub {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.7rem;
-  animation: moveInRight 1s ease-out;
-}
-
-.btn:link,
-.btn:visited {
-  position: relative;
-  margin: 0 auto;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all .15s;
-  font-size: 1.6rem;
-}
-
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
   
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
+  }
+  
+  &--white {
+    color: $color-grey-dark;
+    background-color: $color-white;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+   
+  &--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
 }
-.btn:active {
-  transform: translateY(0);
-  box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
-}
-
-.btn--white {
-  color: $color-grey-dark;
-  background-color: $color-white;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top:0;
-  left:0;
-  z-index: -1;
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-.btn--white::after {
-  background-color: $color-white;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
-
-
-
-
-
-
-
 
 @keyframes moveInLeft {
   0% {
