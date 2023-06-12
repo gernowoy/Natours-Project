@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  /* set font-size as 10px by default */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
