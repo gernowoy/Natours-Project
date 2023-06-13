@@ -1,7 +1,15 @@
-.row {
+.row-about {
   display: flex;
-  gap: 7rem;
+  gap: 5rem;
+  justify-content: center;
 }
-.col {
+.col-about {
+  max-width: 40%;
   flex: 1;
+}
+
+.row-features {
+  margin:0 4vw;
+  display: flex;
+  gap: 4vw;
 }
