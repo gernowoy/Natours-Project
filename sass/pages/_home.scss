@@ -1,14 +1,15 @@
 .header {
-  // display: none;
+  display: none;
 }
 .section-about {
-  // display: none;
+  display: none;
   margin-top: -20vh;
   padding: 25rem 0;
   background-color: $color-grey-light-1;
 }
 
 .section-features {
+  display: none;
   margin-top: -10rem;
   padding: 20rem 0;
   background-image:
@@ -21,4 +22,10 @@
   & > * {
     transform: skewY(5deg);
   }
+}
+
+.section-tours {
+  margin-top: -10rem;
+  padding: 25rem 0 15rem 0;
+  background-color: $color-grey-light-1;
 }

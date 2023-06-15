@@ -13,3 +13,13 @@
   display: flex;
   gap: 4vw;
 }
+
+.row-tours {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.col-tours {
+  flex: 0 1 40rem;
+}
