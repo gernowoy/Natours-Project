@@ -24,6 +24,12 @@
   flex: 0 1 40rem;
 }
 
-.row-book {
+.row-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem
+}
 
+.col-footer {
+  flex:1;
 }
