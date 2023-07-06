@@ -2,34 +2,71 @@
   display: flex;
   gap: 5rem;
   justify-content: center;
+
+  @include respond(tab-portrait) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 .col-about {
   max-width: 40%;
   flex: 1;
+
+  &:last-child {
+    margin-bottom: 15rem;
+  }
+
+  @include respond(tab-portrait) {
+    max-width: 60%;
+    min-width: 50%;
+  }
 }
 
 .row-features {
-  margin:0 4vw;
+  margin: 0 4vw;
   display: flex;
   gap: 4vw;
+
+  @include respond(tab-portrait) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .row-tours {
   display: flex;
   justify-content: center;
   gap: 4vw;
+
+  @include respond(tab-portrait) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .col-tours {
   flex: 0 1 40rem;
+
+  @include respond(tab-portrait) {
+    flex: 0 1 60rem;
+  }
 }
 
 .row-footer {
   display: flex;
   justify-content: space-between;
-  gap: 5rem
+  gap: 5rem;
+
+  @include respond(tab-portrait) {
+    flex-wrap: wrap;
+  }
 }
 
 .col-footer {
-  flex:1;
+  flex: 1;
+  @include respond(tab-portrait) {
+    min-width: 80%;
+  }
 }
