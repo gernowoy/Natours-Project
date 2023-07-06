@@ -21,6 +21,7 @@
   @include respond(tab-portrait) {
     max-width: 60%;
     min-width: 50%;
+    z-index: 2;
   }
 }
 
