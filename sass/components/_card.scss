@@ -14,7 +14,7 @@
     transition: all .8s ease;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgb($color-black, .15);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     overflow: hidden;
 
     &--front {
@@ -95,15 +95,15 @@
     -webkit-box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(to right bottom, rgb($color-secondary-light, .85), rgb($color-secondary-dark, .85));
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
     }
 
     &--2 {
-      background-image: linear-gradient(to right bottom, rgb($color-primary-light, .85), rgb($color-primary-dark, .85));
+      background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
     }
 
     &--3 {
-      background-image: linear-gradient(to right bottom, rgb($color-tertiery-light, .85), rgb($color-tertiery-dark, .85));
+      background-image: linear-gradient(to right bottom, rgba($color-tertiery-light, .85), rgba($color-tertiery-dark, .85));
     }
   }
 
@@ -162,7 +162,7 @@
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
-    box-shadow: 0 1.5rem 4rem rgb($color-black, .15);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
     &__side {
       position: relative;
